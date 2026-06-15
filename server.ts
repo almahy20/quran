@@ -160,8 +160,14 @@ async function startServer() {
   } else {
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
+    // Serve index.html for all non-API, non-static routes (SPA fallback)
     app.get("*", (req, res) => {
-      res.sendFile(path.join(distPath, "index.html"));
+      // Only serve index.html for non-API routes
+      if (!req.path.startsWith("/api")) {
+        res.sendFile(path.join(distPath, "index.html"));
+      } else {
+        res.status(404).json({ error: "API endpoint not found" });
+      }
     });
   }
 
