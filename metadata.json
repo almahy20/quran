@@ -1,0 +1,10 @@
+{
+  "name": "Quran Recitation Evaluator",
+  "description": "منصة ذكية لتقييم تلاوة القرآن الكريم وتحديد أخطاء التجويد ونسبة الصحة بالذكاء الاصطناعي",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
