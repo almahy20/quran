@@ -2,7 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "other",
-  "serverlessFunctionRegion": "auto",
   "env": {
     "GEMINI_API_KEY": "@GEMINI_API_KEY",
     "NODE_ENV": "production"
